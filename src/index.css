@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Arial Black', Gadget, sans-serif;
+  
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1A1A1A;
+  --color-gray-border: #2A2A2A;
+  --color-burnt-orange: #E64A19;
+  --color-burnt-orange-dark: #D35400;
+  --color-white-text: #F5F5F5;
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal text-white-text font-sans selection:bg-burnt-orange selection:text-white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-tight;
+  }
+}
+
+.module-border {
+  @apply border border-gray-border;
+}
